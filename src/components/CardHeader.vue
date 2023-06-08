@@ -10,7 +10,7 @@ const title2 = ref('but a Portfolio')
     <header>
 
         <h1>{{ title }}</h1>
-        <h2>{{ title2 }}</h2>
+        <span>{{ title2 }}</span>
 
     </header>
 </template>
@@ -20,5 +20,6 @@ header {
     background: black;
     color: white;
     width: 100%;
+    padding: 1em;
 }
 </style>

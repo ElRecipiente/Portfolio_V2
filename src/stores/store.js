@@ -40,10 +40,40 @@ export const store = reactive({
             question: 'Fullsize',
             answer: 'Okay, here we go... FULLSIZE !',
             img: ''
+        },
+        {
+            question: 'password',
+            answer: 'startApp'
         }
     ],
+    error: 'Error, try again or click on the rocket.',
+    // WELCOME MSG 
+    welcome: ref('Welcome back Nicolas, enter your password to access data.'),
     // INPUTDATA TO CHECK PASSWORD
     inputData: ref(''),
     // LAUNCH APP ON TRUE, PASSWORD RECQUIERED
-    launchApp: ref(false)
+    launchApp: ref(false),
+    // CHECK INPUTDATA AND INJECT ANSWER
+    checkInputData() {
+        if (this.inputData != '') {
+            this.data.forEach(item => {
+                if (item.question == this.inputData && item.answer == 'startApp') {
+                    this.launchApp = true
+                } else if (item.question == this.inputData) {
+                    this.welcome = ''
+                    for (let i = 0; i < item.answer.length; i++) {
+                        setTimeout(() => this.welcome += item.answer.charAt(i), 50 * i)
+                    }
+                } else {
+                    console.log('ici')
+                    this.welcome = ''
+                    for (let i = 0; i < this.error.length; i++) {
+                        console.log('la')
+                        setTimeout(() => this.welcome += this.error.charAt(i), 50 * i)
+                    }
+                }
+            })
+        }
+        this.inputData = '';
+    }
 })

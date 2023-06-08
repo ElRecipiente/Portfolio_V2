@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import { store } from '../stores/store';
+import { ref } from 'vue';
+
+const inputValue = ref('')
+
+</script>
 
 <template>
-    <form>
-        <input name="inputData" id="inputData" placeholder="Launch the rocket !">
+    <form @submit.prevent="store.checkInputData()">
+        <input v-model="store.inputData" name="inputData" id="inputData" placeholder="Launch the rocket !">
         <button id="rocketButton"><img src="../assets/img/rocket-launch.svg" alt=""></button>
     </form>
 </template>
@@ -12,15 +18,22 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8em;
+    padding: 1em;
     background: black;
     border-radius: 1em;
 
     #inputData {
         flex-grow: 1;
+        height: 100%;
         background: none;
         border: none;
         outline: none;
+        color: white;
+        font-weight: bold;
+
+        &::placeholder {
+            color: whitesmoke;
+        }
     }
 
     #rocketButton {
