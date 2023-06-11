@@ -1,9 +1,7 @@
 <script setup>
 import { store } from '../stores/store';
-import { ref } from 'vue';
 
-const inputValue = ref('')
-
+store.checkInputData()
 </script>
 
 <template>
@@ -30,10 +28,6 @@ form {
         outline: none;
         color: white;
         font-weight: bold;
-
-        &::placeholder {
-            color: whitesmoke;
-        }
     }
 
     #rocketButton {
