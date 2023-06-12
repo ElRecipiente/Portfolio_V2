@@ -1,15 +1,14 @@
 <script setup>
 import CardHeader from './CardHeader.vue';
 import CardInput from './CardInput.vue';
+import DarkSide from './DarkSide.vue';
 import { store } from '../stores/store';
-
-
 
 </script>
 
 <template>
-    <section class="card">
-
+    <section :class="{ active: store.isRotate }" class="card">
+        <DarkSide />
         <CardHeader />
 
         <div class="container">
@@ -18,6 +17,7 @@ import { store } from '../stores/store';
                 <span class="underscore">_</span>
             </div>
             <CardInput />
+
         </div>
 
     </section>
@@ -31,12 +31,20 @@ import { store } from '../stores/store';
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    box-shadow: 0 0 4px black;
+    box-shadow: 0 0 16px white;
     width: 360px;
     height: 600px;
     left: 50%;
     top: 45%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) perspective(1000px) rotate3d(0, 0, 0, 0deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-out;
+
+    &.active {
+        background: red;
+        transform: translate(-50%, -50%) perspective(1000px) rotate3d(0, 180, 0, 180deg);
+    }
 
     .container {
         display: flex;
