@@ -20,12 +20,20 @@ form {
     padding: 1em;
     background: black;
     border-radius: 1em;
-    opacity: 100%;
-    transition: opacity 0.4s ease-out;
 
     &.active {
-        opacity: 0;
+        animation: vanish 1s forwards;
 
+        @keyframes vanish {
+            0% {
+                opacity: 100%;
+            }
+
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
     }
 
     #inputData {

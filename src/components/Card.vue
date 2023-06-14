@@ -24,20 +24,23 @@ watch(() => store.launchApp, () => {
         <DarkSide />
         <CardHeader />
 
-        <div class="container">
+        <div :class="{ active: store.launchApp }" class="container">
             <div class="text_content">
                 <span>{{ store.welcome }}&nbsp;</span>
                 <span class="underscore">_</span>
             </div>
             <CardInput />
+        </div>
+
+        <div :class="{ active: store.launchApp }" class="containerActive">
 
         </div>
 
     </section>
     <!-- Pour la gestion du portfolio -->
     <!-- <section v-else :class="{ active: store.isRotate, multiply: store.launchApp }" class="card">
-                                                                                        <img src="" alt="">
-                                                                                    </section> -->
+                                                                                                                    <img src="" alt="">
+                                                                                                                </section> -->
 </template>
 
 <style lang="scss" scoped>
@@ -76,6 +79,21 @@ watch(() => store.launchApp, () => {
         padding: 1em;
         font-weight: 600;
 
+        &.active {
+            animation: vanish 1s forwards;
+
+            @keyframes vanish {
+                0% {
+                    opacity: 100%;
+                }
+
+                100% {
+                    opacity: 0;
+                    display: none;
+                }
+            }
+        }
+
         .text_content {
             .underscore {
                 opacity: 0;
@@ -99,6 +117,19 @@ watch(() => store.launchApp, () => {
                     opacity: 0%;
                 }
             }
+        }
+    }
+
+    .containerActive {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/img/portrait_default.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &.active {
+            display: flex;
         }
     }
 }
