@@ -11,7 +11,13 @@ export const store = reactive({
 
         {
             question: 'Hello',
-            answer: `Hello again, please enter your password.`,
+            answer: `Hello, please enter your password.`,
+            img: ''
+        },
+
+        {
+            question: 'Hello World',
+            answer: `Hello... enter your password to access to the World.`,
             img: ''
         },
 
@@ -19,6 +25,58 @@ export const store = reactive({
             question: 'password',
             answer: 'startApp'
         }
+    ],
+    projectData: [
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+        {
+            description: '',
+            url: {
+                firstImg: '',
+                secondImg: '',
+                thirdImg: ''
+            }
+        },
+
+
     ],
     error: 'Error, try again or click on the rocket.',
 
@@ -44,8 +102,8 @@ export const store = reactive({
             this.data.forEach(item => {
                 if (item.question == this.inputData && item.answer == 'startApp') {
                     this.isAwswered = true;
-                    this.launchApp = true
-                    console.log('startApp')
+                    this.launchApp = true;
+                    console.log(this.launchApp)
                 } else if (item.question == this.inputData) {
                     this.isAwswered = true;
                     this.welcome = ''
