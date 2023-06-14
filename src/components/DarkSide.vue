@@ -8,6 +8,8 @@
         <span>You want the pass'.</span>
         <span>The pass' is :</span>
         <span>password</span>
+        <span>...</span>
+        <span>Don't judge me.</span>
 
     </aside>
 </template>
