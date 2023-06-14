@@ -3,11 +3,24 @@ import CardHeader from './CardHeader.vue';
 import CardInput from './CardInput.vue';
 import DarkSide from './DarkSide.vue';
 import { store } from '../stores/store';
+import { useRouter } from "vue-router"
+import { watch } from 'vue';
+const router = useRouter()
+
+watch(() => store.launchApp, () => {
+    if (store.launchApp) {
+        router.push({ path: "/caroussel" })
+        console.log('Active')
+    } else {
+        router.push({ path: "/" })
+        console.log('Inactive')
+    }
+})
 
 </script>
 
 <template>
-    <section :class="{ active: store.isRotate }" class="card">
+    <section :class="{ active: store.isRotate, multiply: store.launchApp }" class="card">
         <DarkSide />
         <CardHeader />
 
@@ -21,6 +34,10 @@ import { store } from '../stores/store';
         </div>
 
     </section>
+    <!-- Pour la gestion du portfolio -->
+    <!-- <section v-else :class="{ active: store.isRotate, multiply: store.launchApp }" class="card">
+                                                                                        <img src="" alt="">
+                                                                                    </section> -->
 </template>
 
 <style lang="scss" scoped>
@@ -31,7 +48,6 @@ import { store } from '../stores/store';
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    box-shadow: 0 0 16px white;
     width: 360px;
     height: 600px;
     left: 50%;
@@ -40,6 +56,11 @@ import { store } from '../stores/store';
     transform-origin: center center;
     transform-style: preserve-3d;
     transition: all 0.4s ease-out;
+    z-index: 0;
+
+    &:hover {
+        box-shadow: 0 0 16px white;
+    }
 
     &.active {
         background: red;
@@ -80,5 +101,43 @@ import { store } from '../stores/store';
             }
         }
     }
+}
+
+.multiply {
+    left: 50%;
+
+    &:hover {
+        z-index: 10;
+        top: 42.5%;
+    }
+}
+
+@for $i from 1 through 6 {
+    .multiply:nth-child(#{$i}) {
+        left: 50%;
+        animation: duplicate#{$i} 4s forwards;
+        animation-delay: 0.4s;
+
+        @keyframes duplicate#{$i} {
+            0% {
+                left: 50%;
+            }
+
+            20% {
+                left: 14%;
+            }
+
+            30% {
+                left: 14%;
+            }
+
+            100% {
+                left: 14% *$i;
+            }
+        }
+    }
+
+
+
 }
 </style>

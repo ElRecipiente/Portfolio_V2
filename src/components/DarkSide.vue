@@ -16,7 +16,6 @@
 
 <style lang="scss" scoped>
 .darkSide {
-    z-index: 10;
     position: absolute;
     top: 7em;
     width: 300px;
