@@ -5,10 +5,10 @@ store.checkInputData()
 </script>
 
 <template>
-    <form @submit.prevent="store.checkInputData()" :class="{ active: store.launchApp }">
+    <form :class="{ vanish: store.launchApp }" @submit.prevent="store.checkInputData()">
         <input v-model="store.inputData" name="inputData" id="inputData" placeholder="Launch the rocket !"
             autocomplete="off">
-        <button id="rocketButton"><img src="../assets/img/rocket-launch.svg" alt=""></button>
+        <button id="rocketButton"><img src="../../src/assets/img/rocket-launch.svg" alt=""></button>
     </form>
 </template>
 
@@ -18,10 +18,12 @@ form {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    margin: 1em;
     background: black;
     border-radius: 1em;
 
-    &.active {
+
+    &.vanish {
         animation: vanish 1s forwards;
 
         @keyframes vanish {

@@ -1,5 +1,19 @@
 <script setup>
-import Card from '../components/Card.vue'
+import Card from '../components/Card.vue';
+import { store } from '../stores/store';
+import { watch } from 'vue';
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+watch(() => store.launchApp, () => {
+  if (store.launchApp) {
+    router.push({ path: "/caroussel" })
+    console.log('Activate !')
+    setTimeout(() => {
+      store.showImg = true
+    }, 400);
+  }
+})
 </script>
 
 <template>

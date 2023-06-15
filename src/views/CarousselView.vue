@@ -2,12 +2,11 @@
 import Card from '../components/Card.vue';
 import { store } from '../stores/store'
 
-console.log(store.projectData)
 </script>
 
 <template>
     <main>
-        <Card v-if="store.launchApp" v-for="(item, index) in store.projectData" :key="index" />
+        <Card v-if="store.launchApp" v-for="(item, index) in store.projectData" :key="index" :itemProp="item" />
     </main>
 </template>
 

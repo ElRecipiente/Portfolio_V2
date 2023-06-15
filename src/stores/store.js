@@ -1,7 +1,7 @@
 import { ref, reactive } from "vue";
 
 export const store = reactive({
-    // DATA
+    // DATA, QUESTIONS & ANSWER ARE HERE
     data: [
         {
             question: 'App',
@@ -26,55 +26,49 @@ export const store = reactive({
             answer: 'startApp'
         }
     ],
+    // WHAT IS SHOWND ON PORTFOLIO
     projectData: [
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/APA.png',
+            alt: 'a picture of my project'
+
         },
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/AbsoluteGames.png',
+            alt: 'a picture of my project'
         },
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/P4.png',
+            alt: 'a picture of my project'
         },
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/rpg.png',
+            alt: 'a picture of my project'
         },
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/SpaceInvaders.png',
+            alt: 'a picture of my project'
         },
         {
             description: '',
-            url: {
-                firstImg: '',
-                secondImg: '',
-                thirdImg: ''
-            }
+            url: '../src/assets/img/StellaPong.png',
+            alt: 'a picture of my project'
         },
+        {
+            description: '',
+            url: '../src/assets/img/BackOffice.png',
+            alt: 'a picture of my project'
+        },
+        {
+            description: '',
+            url: '../src/assets/img/MyApp.png',
+            alt: 'a picture of my project'
+        }
 
 
     ],
@@ -83,17 +77,20 @@ export const store = reactive({
     // WELCOME MSG 
     welcome: ref(''),
 
-    // INPUTDATA TO CHECK PASSWORD
+    // INPUTDATA TO CHECK PASSWORD, 'App' BY DEFAULT
     inputData: ref('App'),
 
     // LAUNCH APP ON TRUE, PASSWORD RECQUIERED
     launchApp: ref(false),
 
-    // STOCK IF ANSWERED OR NOT
+    // STOCK IF USER GOT AN ANSWER OR NOT, FALSE BY DEFAULT
     isAwswered: ref(false),
 
-    // STOCK ROTATE STATUS
+    // STOCK ROTATE STATUS, FALSE BY DEFAULT
     isRotate: ref(false),
+
+    // IMG SHOWND ON APP LAUNCH, FALSE BY DEFAULT
+    showImg: ref(false),
 
     // CHECK INPUTDATA AND INJECT ANSWER
     checkInputData() {
@@ -121,6 +118,7 @@ export const store = reactive({
         } else {
             this.isRotate = !this.isRotate
         }
+        // INPUTDATA RESET
         this.inputData = '';
     }
 })

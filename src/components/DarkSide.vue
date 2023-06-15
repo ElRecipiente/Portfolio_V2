@@ -17,7 +17,7 @@
 <style lang="scss" scoped>
 .darkSide {
     position: absolute;
-    top: 7em;
+    top: 7.4em;
     width: 300px;
     height: 350px;
     transform: perspective(1000px);
@@ -31,5 +31,6 @@
     gap: 1em;
     background: black;
     color: red;
+    text-shadow: 0 0 1px rgb(255, 0, 0);
 }
 </style>

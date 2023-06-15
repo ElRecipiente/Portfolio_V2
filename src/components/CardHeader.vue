@@ -8,7 +8,7 @@ const title2 = ref('but a Portfolio')
 </script>
 
 <template>
-    <header :class="{ active: store.launchApp }">
+    <header :class="{ vanish: store.launchApp }">
 
         <h1>{{ title }}</h1>
         <span>{{ title2 }}</span>
@@ -22,10 +22,11 @@ header {
     color: white;
     width: 100%;
     padding: 1em;
-    visibility: visible;
+    opacity: 100%;
+    border-radius: 1em 1em 0 0;
+    box-shadow: 0 2px 4px black;
 
-
-    &.active {
+    &.vanish {
         animation: vanish 1s forwards;
 
         @keyframes vanish {
