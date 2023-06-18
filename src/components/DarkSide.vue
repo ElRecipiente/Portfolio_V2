@@ -3,13 +3,11 @@
 <template>
     <aside class="darkSide">
 
-        <span>Welcome to the DarkSide.</span>
-        <span>We know everything.</span>
-        <span>You want the pass'.</span>
-        <span>The pass' is :</span>
+        <span>KeYwOrDs</span>
+        <br>
+        <span>Hello World</span>
+        <span>TheRedButton</span>
         <span>password</span>
-        <span>...</span>
-        <span>Don't judge me.</span>
 
     </aside>
 </template>
@@ -17,9 +15,9 @@
 <style lang="scss" scoped>
 .darkSide {
     position: absolute;
-    top: 7.4em;
-    width: 300px;
-    height: 350px;
+    top: 30%;
+    width: 250px;
+    height: 300px;
     transform: perspective(1000px);
     transform: rotateY(180deg);
     transform-origin: center center -50px;
@@ -29,7 +27,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-    background: black;
+    background: rgba(0, 0, 0, 0.9);
     color: red;
     text-shadow: 0 0 1px rgb(255, 0, 0);
 }

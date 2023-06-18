@@ -38,24 +38,24 @@ const props = defineProps({
     justify-content: space-between;
     align-items: center;
     color: white;
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 1px white;
     background: url('../../src/assets/img/smokeBG.jpg') no-repeat;
     background-size: cover;
-    width: 350px;
+    width: 375px;
     height: 600px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) perspective(1000px) rotate3d(0, 0, 0, 0deg);
     transform-origin: center center;
     transform-style: preserve-3d;
-    transition: all 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out, transform 0.8s ease-out, top 0.4s ease-out;
     z-index: 0;
     border: 1px solid black;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     border-radius: 1em;
 
     &:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
     }
 
     &.active {
@@ -69,7 +69,7 @@ const props = defineProps({
         width: 100%;
         flex-grow: 1;
         padding: 1em;
-        font-weight: 600;
+        font-weight: 400;
 
         &.vanish {
             animation: vanish 1s forwards;
@@ -112,18 +112,17 @@ const props = defineProps({
         }
     }
 
-    picture {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+    .imgContainer {
+        position: relative;
         opacity: 0;
-        padding: 1em;
-        animation: letTheShowBegin 1s forwards;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        animation: minify 1s forwards;
         animation-delay: 0.4s;
+        border-radius: 1em;
 
-        @keyframes letTheShowBegin {
+        @keyframes minify {
             0% {
                 opacity: 0;
             }
@@ -134,9 +133,24 @@ const props = defineProps({
         }
 
         img {
-            width: fit-content;
-            max-width: 100%;
-            max-height: 100%;
+            height: 100%;
+            position: absolute;
+            animation: letTheShowBegin 30s infinite;
+
+
+            @keyframes letTheShowBegin {
+                0% {
+                    left: 0;
+                }
+
+                80% {
+                    left: -400%;
+                }
+
+                100% {
+                    left: 0
+                }
+            }
         }
     }
 }
@@ -145,8 +159,7 @@ const props = defineProps({
     left: 50%;
 
     &:hover {
-        z-index: 10;
-        top: 48%;
+        top: 49%;
     }
 }
 
@@ -175,6 +188,13 @@ const props = defineProps({
             100% {
                 left: (12*$i)-4%;
                 width: 200px;
+            }
+        }
+
+        .imgContainer {
+
+            img {
+                animation-delay: $i*1s;
             }
         }
     }

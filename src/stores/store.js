@@ -6,19 +6,17 @@ export const store = reactive({
         {
             question: 'App',
             answer: 'Welcome back Nicolas, enter your password to access data.',
-            img: ''
         },
 
         {
-            question: 'Hello',
-            answer: `Hello, please enter your password.`,
+            question: 'TheRedButton',
+            answer: `showTheRedButton`,
             img: ''
         },
 
         {
             question: 'Hello World',
-            answer: `Hello... enter your password to access to the World.`,
-            img: ''
+            answer: `Hello ! Please, enter your password.`,
         },
 
         {

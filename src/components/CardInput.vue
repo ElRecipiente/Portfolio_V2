@@ -52,6 +52,10 @@ form {
         border: none;
         background: none;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         img {
             width: 20px;
             height: 20px;
