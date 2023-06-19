@@ -17,8 +17,6 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
-    margin: 1em;
     background: black;
     border-radius: 1em;
 
@@ -40,6 +38,7 @@ form {
 
     #inputData {
         flex-grow: 1;
+        padding: 1em;
         height: 100%;
         background: none;
         border: none;
@@ -50,6 +49,7 @@ form {
 
     #rocketButton {
         border: none;
+        padding: 1em;
         background: none;
 
         &:hover {

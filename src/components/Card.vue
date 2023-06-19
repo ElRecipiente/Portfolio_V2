@@ -3,6 +3,8 @@ import CardHeader from './CardHeader.vue';
 import CardInput from './CardInput.vue';
 import DarkSide from './DarkSide.vue';
 import { store } from '../stores/store';
+
+// RECUPERE LES PROPS DU PARENT CARDVIEW POUR ITEM
 const props = defineProps({
     itemProp: Object
 })
@@ -10,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <section v-if="!store.showImg" :class="{ active: store.isRotate, multiply: store.launchApp }" class="card">
+    <section v-if="!store.showImg" class="card" :class="{ active: store.isRotate, multiply: store.launchApp }">
         <DarkSide />
         <CardHeader />
 
@@ -24,9 +26,14 @@ const props = defineProps({
 
     </section>
 
-    <section v-else :class="{ active: store.isRotate, multiply: store.launchApp }" class="card">
-        <picture @click="store.checkInputData()" class="imgContainer"><img :src=itemProp.url :alt=itemProp.alt>
+    <section v-else :class="{ multiply: store.launchApp, displayProject: itemProp.display }" class="card"
+        @click="itemProp.display = !itemProp.display">
+        <picture v-if="!itemProp.display" class="imgContainer"><img :src=itemProp.url :alt=itemProp.alt>
         </picture>
+        <article v-else>
+            <h2>{{ itemProp.titre }}</h2>
+            <div>{{ itemProp.description }}</div>
+        </article>
     </section>
 </template>
 
@@ -39,7 +46,7 @@ const props = defineProps({
     align-items: center;
     color: white;
     text-shadow: 0 0 1px white;
-    background: url('../../src/assets/img/smokeBG.jpg') no-repeat;
+    background: url('../../src/assets/img/BG.png') no-repeat;
     background-size: cover;
     width: 375px;
     height: 600px;
@@ -48,9 +55,8 @@ const props = defineProps({
     transform: translate(-50%, -50%) perspective(1000px) rotate3d(0, 0, 0, 0deg);
     transform-origin: center center;
     transform-style: preserve-3d;
-    transition: box-shadow 0.4s ease-out, transform 0.8s ease-out, top 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out, transform 0.6s ease-out, top 0.4s ease-out, width 0.4s ease-out, height 0.4s ease-out;
     z-index: 0;
-    border: 1px solid black;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     border-radius: 1em;
 
@@ -135,20 +141,20 @@ const props = defineProps({
         img {
             height: 100%;
             position: absolute;
-            animation: letTheShowBegin 30s infinite;
+            animation: letTheShowBegin 15s infinite;
 
 
             @keyframes letTheShowBegin {
                 0% {
-                    left: 0;
+                    left: 0%;
                 }
 
                 80% {
-                    left: -400%;
+                    left: -300%;
                 }
 
                 100% {
-                    left: 0
+                    left: 0%;
                 }
             }
         }
@@ -171,7 +177,7 @@ const props = defineProps({
 
         @keyframes duplicate#{$i} {
             0% {
-                left: 50%;
+                left: 40%;
                 width: 350px;
             }
 
@@ -194,9 +200,22 @@ const props = defineProps({
         .imgContainer {
 
             img {
-                animation-delay: $i*1s;
+                animation-delay: $i*0.5s;
             }
         }
     }
+}
+
+.displayProject {
+    width: 95% !important;
+    left: 50% !important;
+    height: 95%;
+    z-index: 1000;
+
+    article {
+        padding: 2em;
+
+    }
+
 }
 </style>

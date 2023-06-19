@@ -5,7 +5,7 @@ export const store = reactive({
     data: [
         {
             question: 'App',
-            answer: 'Welcome back Nicolas, enter your password to access data.',
+            answer: "Hey ! I'm Nicolas Droux, and this is my Portfolio. If you want to see my projects, please enter password. Otherwise, click on the rocket.",
         },
 
         {
@@ -27,47 +27,62 @@ export const store = reactive({
     // WHAT IS SHOWND ON PORTFOLIO
     projectData: [
         {
+            titre: 'Projet APA : Agence de Production Audiovisuelle',
             description: '',
-            url: '../src/assets/img/APA.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/APA1Mod.png',
+            alt: 'a picture of my project',
+            display: false
 
         },
         {
+            titre: 'Projet The Watches',
             description: '',
-            url: '../src/assets/img/AbsoluteGames.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/TheWatchesMod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet Puissance 4',
             description: '',
-            url: '../src/assets/img/P4.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/P4Mod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet RPG : C4m1ll3 Adventures',
             description: '',
-            url: '../src/assets/img/rpg.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/rpgMod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet Space Invaders',
             description: '',
-            url: '../src/assets/img/SpaceInvaders.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/SpaceInvadersMod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet StellaPong',
             description: '',
-            url: '../src/assets/img/StellaPong.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/StellaPongMod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet Projet BackOffice',
             description: '',
-            url: '../src/assets/img/BackOffice.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/BackOfficeMod.png',
+            alt: 'a picture of my project',
+            display: false
         },
         {
+            titre: 'Projet Application API',
             description: '',
-            url: '../src/assets/img/MyApp.png',
-            alt: 'a picture of my project'
+            url: '../src/assets/img/MyAppMod.png',
+            alt: 'a picture of my project',
+            display: false
         }
-
 
     ],
     error: 'Error, try again or click on the rocket.',
