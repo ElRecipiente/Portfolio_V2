@@ -3,7 +3,6 @@ import CardHeader from './CardHeader.vue';
 import CardInput from './CardInput.vue';
 import DarkSide from './DarkSide.vue';
 import { store } from '../stores/store';
-import { img } from '../../src/assets/img'
 
 // RECUPERE LES PROPS DU PARENT CARDVIEW POUR ITEM
 const props = defineProps({

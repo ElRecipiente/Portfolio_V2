@@ -8,7 +8,7 @@ store.checkInputData()
     <form :class="{ vanish: store.launchApp }" @submit.prevent="store.checkInputData()">
         <input v-model="store.inputData" name="inputData" id="inputData" placeholder="Launch the rocket !"
             autocomplete="off">
-        <button id="rocketButton"><img src="../../public/img/rocket-launch.svg" alt=""></button>
+        <button id="rocketButton"><img src="../../src/assets/img/rocket-launch.svg" alt=""></button>
     </form>
 </template>
 

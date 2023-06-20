@@ -1,4 +1,12 @@
 import { ref, reactive } from "vue";
+import APA1Mod from '@/assets/img/APA1Mod.png';
+import TheWatchesMod from '@/assets/img/TheWatchesMod.png';
+import P4Mod from '@/assets/img/P4Mod.png';
+import rpgMod from '@/assets/img/rpgMod.png';
+import SpaceInvadersMod from '@/assets/img/SpaceInvadersMod.png';
+import StellaPongMod from '@/assets/img/StellaPongMod.png';
+import BackOfficeMod from '@/assets/img/BackOfficeMod.png';
+import MyAppMod from '@/assets/img/MyAppMod.png';
 
 export const store = reactive({
     // DATA, QUESTIONS & ANSWER ARE HERE
@@ -29,7 +37,7 @@ export const store = reactive({
         {
             titre: 'Projet APA : Agence de Production Audiovisuelle',
             description: '',
-            url: '../../src/assets/img/APA1Mod.png',
+            url: APA1Mod,
             alt: 'a picture of my project',
             display: false
 
@@ -37,49 +45,49 @@ export const store = reactive({
         {
             titre: 'Projet The Watches',
             description: '',
-            url: '../../src/assets/img/TheWatchesMod.png',
+            url: TheWatchesMod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Puissance 4',
             description: '',
-            url: '../../src/assets/img/P4Mod.png',
+            url: P4Mod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet RPG : C4m1ll3 Adventures',
             description: '',
-            url: '../../src/assets/img/rpgMod.png',
+            url: rpgMod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Space Invaders',
             description: '',
-            url: '../../src/assets/img/SpaceInvadersMod.png',
+            url: SpaceInvadersMod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet StellaPong',
             description: '',
-            url: '../../src/assets/img/StellaPongMod.png',
+            url: StellaPongMod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Projet BackOffice',
             description: '',
-            url: '../../src/assets/img/BackOfficeMod.png',
+            url: BackOfficeMod,
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Application API',
             description: '',
-            url: '../../src/assets/img/MyAppMod.png',
+            url: MyAppMod,
             alt: 'a picture of my project',
             display: false
         }
