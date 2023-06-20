@@ -46,7 +46,7 @@ const props = defineProps({
     align-items: center;
     color: white;
     text-shadow: 0 0 1px white;
-    background: url('../public/img/BG.png') no-repeat;
+    background: url('../../public/img/BG.png') no-repeat;
     background-size: cover;
     width: 375px;
     height: 600px;
