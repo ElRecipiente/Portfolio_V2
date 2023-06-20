@@ -28,11 +28,18 @@ const props = defineProps({
 
     <section v-else :class="{ multiply: store.launchApp, displayProject: itemProp.display }" class="card"
         @click="itemProp.display = !itemProp.display">
-        <picture v-if="!itemProp.display" class="imgContainer"><img :src=itemProp.url :alt=itemProp.alt>
+        <picture v-if="!itemProp.display" class="imgContainer"><img :src=itemProp.projectURL :alt=itemProp.alt>
         </picture>
         <article v-else>
             <h2>{{ itemProp.titre }}</h2>
-            <div>{{ itemProp.description }}</div>
+            <div class="presentation">
+                <div class="description">
+                    {{ itemProp.description }}
+                </div>
+                <picture class="projectImg">
+                    <img v-for="imgURL in itemProp.url" :src=imgURL alt="Project">
+                </picture>
+            </div>
         </article>
     </section>
 </template>
@@ -207,13 +214,40 @@ const props = defineProps({
 }
 
 .displayProject {
-    width: 95% !important;
+    width: 100% !important;
+    max-width: 1600px !important;
     left: 50% !important;
     height: 95%;
     z-index: 1000;
 
     article {
         padding: 2em;
+        overflow-y: hidden;
+
+        h2 {
+            text-align: center;
+            padding: 1em;
+            font-weight: 400;
+        }
+
+        .presentation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .description {
+                text-align: center;
+            }
+
+            .projectImg {
+                width: 40%;
+                margin: 1em;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
 
     }
 

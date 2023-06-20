@@ -1,5 +1,9 @@
 import { ref, reactive } from "vue";
 import APA1Mod from '@/assets/img/APA1Mod.png';
+import APA1 from '@/assets/img/APA1.png';
+import APA2 from '@/assets/img/APA2.png';
+import APA3 from '@/assets/img/APA3.png';
+import APA4 from '@/assets/img/APA4.png';
 import TheWatchesMod from '@/assets/img/TheWatchesMod.png';
 import P4Mod from '@/assets/img/P4Mod.png';
 import rpgMod from '@/assets/img/rpgMod.png';
@@ -36,8 +40,14 @@ export const store = reactive({
     projectData: [
         {
             titre: 'Projet APA : Agence de Production Audiovisuelle',
-            description: '',
-            url: APA1Mod,
+            description: 'One of my first project. I did it with a co-worker.',
+            projectURL: APA1Mod,
+            url: {
+                url1: APA1,
+                url2: APA2,
+                url3: APA3,
+                url4: APA4
+            },
             alt: 'a picture of my project',
             display: false
 
@@ -45,49 +55,56 @@ export const store = reactive({
         {
             titre: 'Projet The Watches',
             description: '',
-            url: TheWatchesMod,
+            projectURL: TheWatchesMod,
+            url: { url1: TheWatchesMod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Puissance 4',
             description: '',
-            url: P4Mod,
+            projectURL: P4Mod,
+            url: { url1: P4Mod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet RPG : C4m1ll3 Adventures',
             description: '',
-            url: rpgMod,
+            projectURL: rpgMod,
+            url: { url1: rpgMod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Space Invaders',
             description: '',
-            url: SpaceInvadersMod,
+            projectURL: SpaceInvadersMod,
+            url: { url1: SpaceInvadersMod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet StellaPong',
             description: '',
-            url: StellaPongMod,
+            projectURL: StellaPongMod,
+            url: { url1: StellaPongMod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Projet BackOffice',
             description: '',
-            url: BackOfficeMod,
+            projectURL: BackOfficeMod,
+            url: { url1: BackOfficeMod },
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Application API',
             description: '',
-            url: MyAppMod,
+            projectURL: MyAppMod,
+            url: { url1: MyAppMod },
             alt: 'a picture of my project',
             display: false
         }
