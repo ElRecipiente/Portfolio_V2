@@ -3,6 +3,7 @@ import CardHeader from './CardHeader.vue';
 import CardInput from './CardInput.vue';
 import DarkSide from './DarkSide.vue';
 import { store } from '../stores/store';
+import { img } from '../../src/assets/img'
 
 // RECUPERE LES PROPS DU PARENT CARDVIEW POUR ITEM
 const props = defineProps({
@@ -46,7 +47,7 @@ const props = defineProps({
     align-items: center;
     color: white;
     text-shadow: 0 0 1px white;
-    background: url('../../public/img/BG.png') no-repeat;
+    background: url('../../src/assets/img/BG.png') no-repeat;
     background-size: cover;
     width: 375px;
     height: 600px;
