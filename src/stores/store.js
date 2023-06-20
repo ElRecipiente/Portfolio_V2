@@ -29,7 +29,7 @@ export const store = reactive({
         {
             titre: 'Projet APA : Agence de Production Audiovisuelle',
             description: '',
-            url: './public/img/APA1Mod.png',
+            url: '../../src/assets/img/APA1Mod.png',
             alt: 'a picture of my project',
             display: false
 
@@ -37,49 +37,49 @@ export const store = reactive({
         {
             titre: 'Projet The Watches',
             description: '',
-            url: './public/img/TheWatchesMod.png',
+            url: '../../src/assets/img/TheWatchesMod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Puissance 4',
             description: '',
-            url: './public/img/P4Mod.png',
+            url: '../../src/assets/img/P4Mod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet RPG : C4m1ll3 Adventures',
             description: '',
-            url: './public/img/rpgMod.png',
+            url: '../../src/assets/img/rpgMod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Space Invaders',
             description: '',
-            url: './public/img/SpaceInvadersMod.png',
+            url: '../../src/assets/img/SpaceInvadersMod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet StellaPong',
             description: '',
-            url: './public/img/StellaPongMod.png',
+            url: '../../src/assets/img/StellaPongMod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Projet BackOffice',
             description: '',
-            url: './public/img/BackOfficeMod.png',
+            url: '../../src/assets/img/BackOfficeMod.png',
             alt: 'a picture of my project',
             display: false
         },
         {
             titre: 'Projet Application API',
             description: '',
-            url: './public/img/MyAppMod.png',
+            url: '../../src/assets/img/MyAppMod.png',
             alt: 'a picture of my project',
             display: false
         }
