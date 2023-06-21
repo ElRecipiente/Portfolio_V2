@@ -40,7 +40,16 @@ export const store = reactive({
     projectData: [
         {
             titre: 'Projet APA : Agence de Production Audiovisuelle',
-            description: 'One of my first project. I did it with a co-worker.',
+            details: {
+                start: '12/12/2022',
+                duration: '2 weeks',
+                type: 'Team Project (2)',
+                technologies: 'HTML / CSS / JS / Figma',
+                responsive: 'Responsive',
+                github: 'https://github.com/ElRecipiente/APA',
+                link: 'https://elrecipiente.github.io/APA/',
+                description: "One of my first project, done in pairs. The chosen theme was the creation of an audiovisual production website. We train a lot HTML & CSS, and start to discover Javascript."
+            },
             projectURL: APA1Mod,
             url: {
                 url1: APA1,
@@ -54,7 +63,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet The Watches',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Team Project (3)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'A '
+            },
             projectURL: TheWatchesMod,
             url: { url1: TheWatchesMod },
             alt: 'a picture of my project',
@@ -62,7 +80,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet Puissance 4',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: P4Mod,
             url: { url1: P4Mod },
             alt: 'a picture of my project',
@@ -70,7 +97,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet RPG : C4m1ll3 Adventures',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: rpgMod,
             url: { url1: rpgMod },
             alt: 'a picture of my project',
@@ -78,7 +114,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet Space Invaders',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: SpaceInvadersMod,
             url: { url1: SpaceInvadersMod },
             alt: 'a picture of my project',
@@ -86,7 +131,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet StellaPong',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: StellaPongMod,
             url: { url1: StellaPongMod },
             alt: 'a picture of my project',
@@ -94,7 +148,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet Projet BackOffice',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: BackOfficeMod,
             url: { url1: BackOfficeMod },
             alt: 'a picture of my project',
@@ -102,7 +165,16 @@ export const store = reactive({
         },
         {
             titre: 'Projet Application API',
-            description: '',
+            details: {
+                start: '00/00/0000',
+                duration: '2 semaines',
+                type: 'Projet en groupe (2)',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'Oui',
+                github: '',
+                link: '',
+                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+            },
             projectURL: MyAppMod,
             url: { url1: MyAppMod },
             alt: 'a picture of my project',

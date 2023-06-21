@@ -33,8 +33,8 @@ const props = defineProps({
         <article v-else>
             <h2>{{ itemProp.titre }}</h2>
             <div class="presentation">
-                <div class="description">
-                    {{ itemProp.description }}
+                <div class="details">
+                    <p v-for="detail in itemProp.details">{{ detail }}</p>
                 </div>
                 <picture class="projectImg">
                     <img v-for="imgURL in itemProp.url" :src=imgURL alt="Project">
@@ -215,14 +215,18 @@ const props = defineProps({
 
 .displayProject {
     width: 100% !important;
-    max-width: 1600px !important;
+    max-width: 1850px !important;
     left: 50% !important;
-    height: 95%;
+    height: 90%;
     z-index: 1000;
+
+    &:hover {
+        top: 50%;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
 
     article {
         padding: 2em;
-        overflow-y: hidden;
 
         h2 {
             text-align: center;
@@ -232,19 +236,24 @@ const props = defineProps({
 
         .presentation {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
 
-            .description {
-                text-align: center;
+            .details {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                gap: 1em;
             }
 
             .projectImg {
+                height: 700px;
+                overflow-y: scroll;
                 width: 40%;
-                margin: 1em;
 
                 img {
                     width: 100%;
+                    margin: 2em 0;
                 }
             }
         }
