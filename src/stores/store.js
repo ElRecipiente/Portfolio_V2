@@ -5,12 +5,29 @@ import APA2 from '@/assets/img/APA2.png';
 import APA3 from '@/assets/img/APA3.png';
 import APA4 from '@/assets/img/APA4.png';
 import TheWatchesMod from '@/assets/img/TheWatchesMod.png';
+import TheWatches from '@/assets/img/TheWatches.png';
+import TheWatches2 from '@/assets/img/TheWatches2.png';
+import TheWatches3 from '@/assets/img/TheWatches3.png';
 import P4Mod from '@/assets/img/P4Mod.png';
+import P4 from '@/assets/img/P4.png';
 import rpgMod from '@/assets/img/rpgMod.png';
+import rpg from '@/assets/img/rpg.png';
 import SpaceInvadersMod from '@/assets/img/SpaceInvadersMod.png';
+import SpaceInvaders from '@/assets/img/SpaceInvaders.png';
 import StellaPongMod from '@/assets/img/StellaPongMod.png';
+import StellaPong from '@/assets/img/StellaPong.png';
 import BackOfficeMod from '@/assets/img/BackOfficeMod.png';
+import BackOffice from '@/assets/img/BackOffice.png';
+import BackOffice1 from '@/assets/img/BackOffice1.png';
+import BackOffice2 from '@/assets/img/BackOffice2.png';
+import BackOffice3 from '@/assets/img/BackOffice3.png';
+import BackOffice4 from '@/assets/img/BackOffice4.png';
 import MyAppMod from '@/assets/img/MyAppMod.png';
+import MyApp from '@/assets/img/MyApp.png';
+import MyApp1 from '@/assets/img/MyApp1.png';
+import MyApp2 from '@/assets/img/MyApp2.png';
+import MyApp3 from '@/assets/img/MyApp3.png';
+import AbsoluteGames from '@/assets/img/AbsoluteGames.png'
 
 export const store = reactive({
     // DATA, QUESTIONS & ANSWER ARE HERE
@@ -39,13 +56,13 @@ export const store = reactive({
     // WHAT IS SHOWND ON PORTFOLIO
     projectData: [
         {
-            titre: 'Projet APA : Agence de Production Audiovisuelle',
+            titre: 'Project APA : Agence de Production Audiovisuelle',
             details: {
                 start: '12/12/2022',
                 duration: '2 weeks',
                 type: 'Team Project (2)',
-                technologies: 'HTML / CSS / JS / Figma',
-                responsive: 'Responsive',
+                technologies: 'HTML / CSS / JS',
+                responsive: 'True',
                 github: 'https://github.com/ElRecipiente/APA',
                 link: 'https://elrecipiente.github.io/APA/',
                 description: "One of my first project, done in pairs. The chosen theme was the creation of an audiovisual production website. We train a lot HTML & CSS, and start to discover Javascript."
@@ -62,121 +79,148 @@ export const store = reactive({
 
         },
         {
-            titre: 'Projet The Watches',
+            titre: 'Project The Watches',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
+                start: '24/01/2023',
+                duration: '2 weeks',
                 type: 'Team Project (3)',
                 technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'A '
+                responsive: 'True',
+                github: 'https://github.com/ElRecipiente/The-Watches-Project',
+                link: 'https://elrecipiente.github.io/The-Watches-Project/',
+                description: 'Was trying to make a look like E-commerce website here, done with 2 others members of my training. '
             },
             projectURL: TheWatchesMod,
-            url: { url1: TheWatchesMod },
+            url: {
+                url1: TheWatches,
+                url2: TheWatches2,
+                url3: TheWatches3
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet Puissance 4',
+            titre: 'Project Puissance 4',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
+                start: '16/01/2023',
+                duration: '1 week',
+                type: 'Solo Project',
                 technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                responsive: 'False',
+                github: 'https://github.com/ElRecipiente/TicTacToe-Puissance-4',
+                link: 'https://elrecipiente.github.io/TicTacToe-Puissance-4/',
+                description: 'A TicTacToe to train Javascript, but gone wrong. Was really fun to do indeed, but careful with the sound. Maybe I overdid it. Part of my Absolute Games project.'
             },
             projectURL: P4Mod,
-            url: { url1: P4Mod },
+            url: {
+                url1: P4,
+                url2: AbsoluteGames
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet RPG : C4m1ll3 Adventures',
+            titre: 'Project RPG : C4m1ll3 Adventures',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
+                start: '09/01/2023',
+                duration: '1 week',
+                type: 'Solo Project',
                 technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                responsive: 'False',
+                github: 'https://github.com/ElRecipiente/C4m1ll3-Adventures',
+                link: 'https://elrecipiente.github.io/C4m1ll3-Adventures/',
+                description: 'A nice and (very) short mini game, and my first Javascript project. Part of my Absolute Games project.'
             },
             projectURL: rpgMod,
-            url: { url1: rpgMod },
+            url: {
+                url1: rpg,
+                url2: AbsoluteGames
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet Space Invaders',
+            titre: 'Project Space Invaders',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
+                start: '13/02/2023',
+                duration: '1 week',
+                type: 'Solo Project',
                 technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                responsive: 'False',
+                github: 'https://github.com/ElRecipiente/SpaceInvaders',
+                link: 'https://elrecipiente.github.io/SpaceInvaders/',
+                description: 'An other mini game in Javascript. Trying to do something like the old game here too. Part of my Absolute Games project.'
             },
             projectURL: SpaceInvadersMod,
-            url: { url1: SpaceInvadersMod },
+            url: {
+                url1: SpaceInvaders,
+                url2: AbsoluteGames
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet StellaPong',
+            titre: 'Project StellaPong',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
+                start: '07/02/2023',
+                duration: '1 week',
+                type: 'Solo Project',
                 technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                responsive: 'False',
+                github: 'https://github.com/ElRecipiente/StellaPong',
+                link: 'https://elrecipiente.github.io/StellaPong/',
+                description: 'A pretty and less complex version of the old pong game, with Javascript. Part of my Absolute Games project.'
             },
             projectURL: StellaPongMod,
-            url: { url1: StellaPongMod },
+            url: {
+                url1: StellaPong,
+                url2: AbsoluteGames
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet Projet BackOffice',
+            titre: 'Project BackOffice',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
-                technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                start: '02/05/2023',
+                duration: '2-3 weeks',
+                type: 'Solo Project',
+                technologies: 'HTML / SCSS / PHP / Twig',
+                responsive: 'False',
+                github: 'https://github.com/ElRecipiente/BackOffice-Project',
+                link: 'Not available for now',
+                description: 'A backoffice project to train PHP with the MVC model.'
             },
             projectURL: BackOfficeMod,
-            url: { url1: BackOfficeMod },
+            url: {
+                url1: BackOffice1,
+                url2: BackOffice,
+                url3: BackOffice2,
+                url4: BackOffice3,
+                url5: BackOffice4
+            },
             alt: 'a picture of my project',
             display: false
         },
         {
-            titre: 'Projet Application API',
+            titre: 'Projet Application API (using BackOffice project)',
             details: {
-                start: '00/00/0000',
-                duration: '2 semaines',
-                type: 'Projet en groupe (2)',
-                technologies: 'HTML / CSS / JS',
-                responsive: 'Oui',
-                github: '',
-                link: '',
-                description: 'Un de mes premiers projets, fait en binôme. Le thème choisi était la création d'
+                start: '23/05/2023',
+                duration: '2-3 weeks',
+                type: 'Solo Project',
+                technologies: 'HTML / SCSS / Vue3 JS',
+                responsive: 'True',
+                github: 'https://github.com/ElRecipiente/Application-API',
+                link: 'Not available for now',
+                description: 'A project to use API made in the previous project, BackOffice, and designed mobile first.'
             },
             projectURL: MyAppMod,
-            url: { url1: MyAppMod },
+            url: {
+                url1: MyApp1,
+                url2: MyApp,
+                url3: MyApp2,
+                url4: MyApp3
+            },
             alt: 'a picture of my project',
             display: false
         }

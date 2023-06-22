@@ -34,7 +34,15 @@ const props = defineProps({
             <h2>{{ itemProp.titre }}</h2>
             <div class="presentation">
                 <div class="details">
-                    <p v-for="detail in itemProp.details">{{ detail }}</p>
+                    <!-- <p v-for="detail in itemProp.details">{{ detail }}</p> -->
+                    <p>Start of the Project: {{ itemProp.details.start }}</p>
+                    <p>Duration : {{ itemProp.details.duration }}</p>
+                    <p>Type : {{ itemProp.details.type }}</p>
+                    <p>Technologies : {{ itemProp.details.technologies }}</p>
+                    <p>Responsive : {{ itemProp.details.responsive }}</p>
+                    <p>GitHub : <a :href=itemProp.details.github target="_blank">{{ itemProp.details.github }}</a></p>
+                    <p>Website : <a :href=itemProp.details.link target="_blank">{{ itemProp.details.link }}</a></p>
+                    <p>Description : {{ itemProp.details.description }}</p>
                 </div>
                 <picture class="projectImg">
                     <img v-for="imgURL in itemProp.url" :src=imgURL alt="Project">
@@ -214,11 +222,12 @@ const props = defineProps({
 }
 
 .displayProject {
-    width: 100% !important;
     max-width: 1850px !important;
-    left: 50% !important;
     height: 90%;
     z-index: 1000;
+    width: 100% !important;
+    left: 50% !important;
+
 
     &:hover {
         top: 50%;
@@ -226,34 +235,63 @@ const props = defineProps({
     }
 
     article {
+        opacity: 0;
         padding: 2em;
+        height: 100%;
+        animation: blink 1s forwards;
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 100%;
+            }
+        }
 
         h2 {
             text-align: center;
             padding: 1em;
             font-weight: 400;
+            font-size: 28px;
+            width: 100%;
         }
 
         .presentation {
+            height: 90%;
             display: flex;
             justify-content: space-around;
             align-items: center;
 
             .details {
+                font-size: 18px;
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
                 gap: 1em;
+                width: 40%;
+
+                a {
+                    color: white;
+                }
             }
 
             .projectImg {
-                height: 700px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                height: fit-content;
+                max-height: 70%;
                 overflow-y: scroll;
-                width: 40%;
+                width: 50%;
 
                 img {
-                    width: 100%;
-                    margin: 2em 0;
+                    border-radius: 1em;
+                    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+                    max-width: 90%;
+                    max-height: 700px;
+                    margin: 2em 1em;
                 }
             }
         }
