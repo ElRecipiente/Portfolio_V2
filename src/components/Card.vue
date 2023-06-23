@@ -238,9 +238,10 @@ const props = defineProps({
         opacity: 0;
         padding: 2em;
         height: 100%;
-        animation: blink 1s forwards;
+        animation: oppa 0.4s forwards;
+        animation-delay: 0.4s;
 
-        @keyframes blink {
+        @keyframes oppa {
             0% {
                 opacity: 0;
             }
@@ -256,6 +257,7 @@ const props = defineProps({
             font-weight: 400;
             font-size: 28px;
             width: 100%;
+            text-shadow: 0 0 12px white;
         }
 
         .presentation {

@@ -39,7 +39,7 @@ export const store = reactive({
 
         {
             question: 'TheRedButton',
-            answer: `showTheRedButton`,
+            answer: `Sorry, the red button is disabled for now. Try later !`,
             img: ''
         },
 
