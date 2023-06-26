@@ -26,28 +26,31 @@ const props = defineProps({
 
     </section>
 
-    <section v-else :class="{ multiply: store.launchApp, displayProject: itemProp.display }" class="card"
-        @click="itemProp.display = !itemProp.display">
-        <picture v-if="!itemProp.display" class="imgContainer"><img :src=itemProp.projectURL :alt=itemProp.alt>
+    <section v-else :class="{ multiply: store.launchApp, displayProject: itemProp.display }" class="card">
+        <picture @click="itemProp.display = !itemProp.display" v-if="!itemProp.display" class="imgContainer"><img
+                :src=itemProp.projectURL :alt=itemProp.alt>
         </picture>
         <article v-else>
             <h2>{{ itemProp.titre }}</h2>
             <div class="presentation">
                 <div class="details">
                     <!-- <p v-for="detail in itemProp.details">{{ detail }}</p> -->
-                    <p>Start of the Project: {{ itemProp.details.start }}</p>
-                    <p>Duration : {{ itemProp.details.duration }}</p>
-                    <p>Type : {{ itemProp.details.type }}</p>
-                    <p>Technologies : {{ itemProp.details.technologies }}</p>
-                    <p>Responsive : {{ itemProp.details.responsive }}</p>
-                    <p>GitHub : <a :href=itemProp.details.github target="_blank">{{ itemProp.details.github }}</a></p>
-                    <p>Website : <a :href=itemProp.details.link target="_blank">{{ itemProp.details.link }}</a></p>
-                    <p>Description : {{ itemProp.details.description }}</p>
+                    <p><span class="bold">Start of the Project :</span> {{ itemProp.details.start }}</p>
+                    <p><span class="bold">Duration :</span> {{ itemProp.details.duration }}</p>
+                    <p><span class="bold">Type :</span> {{ itemProp.details.type }}</p>
+                    <p><span class="bold">Technologies :</span> {{ itemProp.details.technologies }}</p>
+                    <p><span class="bold">Responsive :</span> {{ itemProp.details.responsive }}</p>
+                    <p><span class="bold">GitHub :</span> <a :href=itemProp.details.github target="_blank">{{
+                        itemProp.details.github }}</a></p>
+                    <p><span class="bold">Website :</span> <a :href=itemProp.details.link target="_blank">{{
+                        itemProp.details.link }}</a></p>
+                    <p><span class="bold">Description :</span> {{ itemProp.details.description }}</p>
                 </div>
                 <picture class="projectImg">
                     <img v-for="imgURL in itemProp.url" :src=imgURL alt="Project">
                 </picture>
             </div>
+            <span class="close" @click="itemProp.display = !itemProp.display">X</span>
         </article>
     </section>
 </template>
@@ -72,11 +75,11 @@ const props = defineProps({
     transform-style: preserve-3d;
     transition: box-shadow 0.4s ease-out, transform 0.6s ease-out, top 0.4s ease-out, width 0.4s ease-out, height 0.4s ease-out;
     z-index: 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 1em;
 
     &:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
     }
 
     &.active {
@@ -178,6 +181,7 @@ const props = defineProps({
 
 .multiply {
     left: 50%;
+    cursor: pointer;
 
     &:hover {
         top: 49%;
@@ -227,6 +231,7 @@ const props = defineProps({
     z-index: 1000;
     width: 100% !important;
     left: 50% !important;
+    cursor: auto;
 
 
     &:hover {
@@ -260,6 +265,21 @@ const props = defineProps({
             text-shadow: 0 0 12px white;
         }
 
+        .close {
+            font-family: sans-serif;
+            position: absolute;
+            font-size: 28px;
+            right: 2%;
+            top: 3%;
+            padding: 3px;
+            cursor: pointer;
+            transition: text-shadow 0.4s ease-out;
+
+            &:hover {
+                text-shadow: 0 0 4px white;
+            }
+        }
+
         .presentation {
             height: 90%;
             display: flex;
@@ -273,6 +293,10 @@ const props = defineProps({
                 justify-content: center;
                 gap: 1em;
                 width: 40%;
+
+                .bold {
+                    font-weight: 600;
+                }
 
                 a {
                     color: white;

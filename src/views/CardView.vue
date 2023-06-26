@@ -7,7 +7,7 @@ const router = useRouter();
 
 watch(() => store.launchApp, () => {
   if (store.launchApp) {
-    router.push({ path: "/caroussel" })
+    router.push({ path: "/mes-projets" })
     console.log('Activate !')
     setTimeout(() => {
       store.showImg = true
