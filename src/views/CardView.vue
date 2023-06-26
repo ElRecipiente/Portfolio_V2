@@ -7,7 +7,7 @@ const router = useRouter();
 
 watch(() => store.launchApp, () => {
   if (store.launchApp) {
-    router.push({ path: "/mes-projets" })
+    router.push({ path: "/my-projects" })
     console.log('Activate !')
     setTimeout(() => {
       store.showImg = true

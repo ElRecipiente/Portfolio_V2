@@ -11,7 +11,7 @@ const router = createRouter({
       component: CardView
     },
     {
-      path: '/mes-projets',
+      path: '/my-projects',
       name: 'caroussel',
       component: CarousselView
     }
